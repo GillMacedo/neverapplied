@@ -1,0 +1,14 @@
+{
+  "name": "neverapplied-marketplace",
+  "description": "Marketplace for neverapplied, which finds SQL migrations that deployed databases will skip, refuse or run out of order.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "neverapplied",
+      "source": "./plugin",
+      "description": "Compare a branch's migrations folder with its base and find files golang-migrate, goose or dbmate will skip, refuse or run out of order on databases already deployed."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "neverapplied",
+  "version": "0.1.0",
+  "description": "Find SQL migrations that deployed databases will skip, refuse or run out of order: new files below the highest applied version, edits to migrations that already ran, removed or renamed versions, duplicate versions and misnamed files. Compares a branch with its base for golang-migrate, goose and dbmate, without a database.",
+  "author": {
+    "name": "Giulliano Macedo",
+    "url": "https://github.com/GillMacedo"
+  },
+  "homepage": "https://github.com/GillMacedo/neverapplied",
+  "repository": "https://github.com/GillMacedo/neverapplied",
+  "license": "MIT",
+  "keywords": ["database-migrations", "golang-migrate", "goose", "dbmate", "sql", "migrations", "out-of-order", "code-review", "ci"]
+}

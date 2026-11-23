@@ -1,0 +1,27 @@
+[
+  {
+    "skills": ["checking-migration-order"],
+    "query": "Review the migrations in this PR before I merge it into main.",
+    "expected_behavior": [
+      "Runs run.sh with --base-ref on the base branch and the migrations folder",
+      "Explains each NA1xx error with what golang-migrate, goose or dbmate will do on an existing database",
+      "Proposes the suggested rename or a new migration without editing files unasked"
+    ]
+  },
+  {
+    "skills": ["checking-migration-order"],
+    "query": "My new migration ran locally but staging never got the column. We use golang-migrate.",
+    "expected_behavior": [
+      "Checks whether the migration's version is below the highest version on main, NA101",
+      "Explains that golang-migrate stores only the latest version, so lower files are skipped without an error"
+    ]
+  },
+  {
+    "skills": ["checking-migration-order"],
+    "query": "neverapplied exited 3 on our CI run. Are the migrations fine?",
+    "expected_behavior": [
+      "Says exit 3 means there is no result, so it can't say the migrations are fine",
+      "Reads the message and fixes the input, such as fetching the base branch or completing a cut-off file"
+    ]
+  }
+]
